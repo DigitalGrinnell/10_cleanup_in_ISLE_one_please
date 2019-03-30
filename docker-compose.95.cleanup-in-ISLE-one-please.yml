@@ -1,0 +1,22 @@
+## Sample `docker-compose.override.yml`
+##   from https://github.com/DigitalGrinnell/cleanup-in-ISLE-one-please
+## Created 2019-Mar-29
+## M. McFate - Grinnell College Libraries
+
+## See https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+##   or https://github.com/Animosity/CraftIRC/wiki/Complete-idiot%27s-introduction-to-yaml
+##   to learn more about YAML syntax.
+
+## The following `version` and `services` keys must exist and they mush match the
+##   keys used in your `docker-compose.yml` file.  All other lines, like the file
+##   itself, are OPTIONAL.  However, if you remove ALL elements of a list you MUST
+##   also remove (or comment out) the list's key.  See the 'live' examples below.
+#version: '3'
+#services:
+
+  fedora:
+    ## There are several directories in the ISLE stack, within the FEDORA container,
+    ##   that can be safely OBLITERATED.  This is where that happens.
+    volumes:
+      ## vvv Drop the BOMB!  Blow away all the unnecessary FEDORA/FGS cruft before you go crazy! vvv
+      - ./cleanup-in-ISLE-one-please/BOMB/:/usr/local/tomcat/webapps/fedoragsearch/FgsConfig   ## Everything down this path is cruft!
