@@ -40,4 +40,4 @@ It's easy, just follow these steps...
   2) Navigate (`cd`) your working directoy to ISLE, the directory that holds your `docker-compose.yml` file.  
   3) `git clone` this repository to your ISLE host with something like `git clone https://github.com/DigitalGrinnell/cleanup-in-ISLE-one-please.git`  
   4) Spin up your ISLE instance using our special form of `docker-compose up`, like so: `isle-docker-compose`.
-  5) Your ISLE instance should spin up just as if you had issued `docker-compose up -d`, but with is feature engaged.
+  5) Your ISLE instance should spin up just as if you had issued `docker-compose up -d`, but with this feature engaged.
