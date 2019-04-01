@@ -14,4 +14,4 @@ services:
     ## There are several directories in the ISLE stack, specifically within the FEDORA container, that can be safely OBLITERATED.  This is where that happens.
     volumes:
       ## vvv Drop the BOMB!  Blow away all the unnecessary FEDORA/FGS cruft before you go crazy! vvv
-      - ./cleanup-in-ISLE-one-please/BOMB/:/usr/local/tomcat/webapps/fedoragsearch/FgsConfig   ## Everything down this container path is cruft!
+      - ./10_cleanup_in_ISLE_one_please/BOMB/:/usr/local/tomcat/webapps/fedoragsearch/FgsConfig   ## Everything down this container path is cruft!
