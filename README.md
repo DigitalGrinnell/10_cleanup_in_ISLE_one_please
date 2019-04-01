@@ -1,4 +1,4 @@
-# cleanup_in_ISLE_one_please
+# 10_cleanup_in_ISLE_one_please
 This `isle-docker-compose` project obliterates unnecessary directories and files found in Islandora/ISLE.
 
 ## Attention!  
@@ -24,12 +24,6 @@ Hmmm, 5 copies of the same file?  Which one is "significant" and in-control?  Ar
 
 I cannot definitively answer the last two questions... hence the note about using this module with CAUTION!  However, this module can help you do some investigation, and maybe save your sanity if/when you do encounter any duplicates like this, or you positively identify a file/folder that is just useless cruft.
 
-## How Does This Work?
-This module assumes that you're working in an ISLE (https://github.com/Islandora-Collaboration-Group/ISLE) instance of Islandora, one that uses `Docker` and `docker-compose`.  In that case you have a `docker-compose.yml` file that holds the key to your configuration; it's the file that is responsible for ultimately building your Islandora/ISLE stack.  You can easily override portions of your stack configuration using additional .yml files, using `-f` options, IF you add them to your `docker-compose up -d` command like so:
-```
-docker-compose -f docker-compose.yml -f ./path/to/additional/docker-compose.XX.additional-docker-compose.yml up -d
-```
-
 ## The isle-docker-compose Command
 See https://github.com/DigitalGrinnell/ISLE_docker_compose for details.
 
@@ -37,8 +31,8 @@ See https://github.com/DigitalGrinnell/ISLE_docker_compose for details.
 It's easy, assuming the `isle-docker-compose` command is already defined, just follow these steps...
 
   1) Open a terminal to your ISLE host, and in that terminal...  
-  2) Navigate (`cd`) your working directoy to ISLE, the directory that holds your `docker-compose.yml` file.
+  2) Navigate (`cd`) your working directory to ISLE, the directory that holds your `docker-compose.yml` file. Probably `cd /opt/ISLE`.
   3) Navigate (`cd`) into your `ISLE_docker_compose` directory with: `cd ISLE_docker_compose`.
-  4) `git clone` this repository to your ISLE host using `git clone https://github.com/DigitalGrinnell/cleanup_in_ISLE_one_please.git; cd ..`  
+  4) `git clone` this repository to your ISLE host using `git clone https://github.com/DigitalGrinnell/10_cleanup_in_ISLE_one_please.git; cd ..`.  
   5) Spin up your ISLE instance using our special form of `docker-compose up`, like so: `./isle-docker-compose`.
   6) Your ISLE instance should spin up just as if you had issued `docker-compose up -d`, but with this feature engaged.
