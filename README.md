@@ -1,5 +1,5 @@
 # cleanup-in-ISLE-one-please
-Obliterates unnecessary directories and files found in Islandora/ISLE.
+This `isle-docker-compose` project obliterates unnecessary directories and files found in Islandora/ISLE.
 
 ## Attention!  
 If you found this file, and/or one named `OBLITERATED.md`, lurking inside your Islandora stack, then it was put here to replace some files/folders that were deemed "unnecessary".  If you're confused by this statement, please read on.
